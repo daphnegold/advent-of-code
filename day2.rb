@@ -11,8 +11,8 @@ end
 total_paper = 0
 
 puzzle.each_line do |dimension|
-  dimensions = dimension.split("x").map(&:to_i).combination(2)
-  total_paper += surface_area(dimensions) + min_side(dimensions)
+  sides = dimension.split("x").map(&:to_i).combination(2)
+  total_paper += surface_area(sides) + min_side(sides)
 end
 
 puts total_paper
